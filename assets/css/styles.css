@@ -1,0 +1,646 @@
+
+body {
+  display: grid;
+  margin: 0;
+  font-family: "GothamProRegular";
+  font-size: 14px;
+
+  cursor: default;
+
+  justify-content: center;
+
+  background-color: #000000;
+}
+
+.site {
+  grid-template-rows: repeat(4, 1fr);
+}
+
+:root {
+  --black-color-text: #010101
+}
+
+.grid {
+  display: grid;
+}
+
+.view {
+  align-content: center;
+  min-height: 100vh;
+}
+
+.view-title-txt {
+  font-size: 93px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  margin-top: 95px;
+}
+
+.container {
+  width: 55%;
+
+  place-self: center;
+
+  z-index: 1;
+}
+
+.link-anchor {
+  text-decoration: none;
+  color: #FFFFFF;
+  
+  transition: color .2s linear;
+}
+
+.anchor {
+  position: absolute;
+}
+
+.link-anchor:hover {
+  color: #FFC100
+}
+
+/* navbar-and-statistic */
+
+.navbar-and-statistic {
+  grid-template-rows: 30px;
+  grid-template-columns: auto 120px;
+
+  z-index: 1;
+
+  margin-top: 70px;
+}
+
+.navbar {
+  width: max-content;
+  grid-template-columns: repeat(3, 145px);
+  column-gap: 3%;
+}
+
+.nav-btn {
+  width: 145px;
+  height: 28px;
+  cursor: pointer;
+  place-content: center;
+  
+  border-color: #FFFFFF;
+  border-style: solid;
+  border-radius: 18px;
+
+  color: #FFFFFF;
+
+  transition: border-color .2s linear;
+  transition: color .2s linear;
+}
+
+.nav-btn:hover {
+  border-color: #FFC100;
+  color: #FFC100
+}
+
+.statistic {
+  margin-left: 0;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, auto);
+  align-content: flex-end;
+}
+
+.statistic-img {
+  width: 24px;
+  height: 22px;
+}
+
+.statistic-txt {
+  color: #FFC100;
+  cursor: pointer;
+  place-content: end;
+}
+
+/* request */
+
+.request-form {
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 5vw;
+
+  margin-top: 50px;
+}
+
+.request-form-input {
+  width: 240px;
+  height: 46px;
+
+  font-size: 20px;
+  color: #FFFFFF;
+
+  background: none;
+  outline: none;
+  border: none;
+
+  border-bottom: 1px solid #828282;
+}
+
+.request-form-btn {
+  width: 200px;
+  height: 45px;
+  border-radius: 24px;
+
+  cursor: pointer;
+
+  text-align: center;
+  align-self: flex-end;
+  place-content: center;
+  
+  background-color: #FFC100;
+
+  transition: box-shadow .2s linear;
+}
+
+.request-form-btn:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) inset;
+}
+
+.request-form-btn:active {
+  box-shadow: none;
+}
+
+.request-form-btn-txt {
+  font-family: "GothamProBold";
+  font-size: 18px;
+  color: #000000;
+}
+
+/* header */
+
+.header {
+  align-content: center;
+  min-width: 100%;
+  grid-template-columns: 1fr 550px;
+  background-color: #fff;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.title {
+  align-content: center;
+  height: 70px;
+  grid-template-columns: repeat(2, auto);
+}
+
+.title-header-name {
+  margin-left: 2vw;
+  align-self: center;
+}
+
+.title-address {
+  display: grid;
+  margin-right: 1vw;
+  text-align: end;
+}
+
+.title-phonenumber {
+  font-family: "GothamProBold";
+  font-size: 40px;
+
+  margin: 0;
+
+  color: var(--black-color-text);
+}
+
+.title-email {
+  font-family: "GothamProMedium";
+  font-size: 19px;
+
+  color: var(--black-color-text);
+}
+
+/* sale */
+
+.sale {
+  align-content: center;
+  grid-template-columns: repeat(2, auto);
+  height: 70px;
+  justify-content: space-between;
+
+  background-color: #FFC100;
+}
+
+.sale-description {
+  width: max(100%, 254px);
+
+  font-family: "GothamProMedium";
+  font-size: 20px;
+  text-align: start;
+
+  color: var(--black-color-text);
+
+  margin-left: 1vw;
+}
+
+.sale-button {
+  width: 165px;
+  height: 35px;
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  align-self: center;
+  place-content: center;
+  margin-right: 2vw;
+  
+  background-color: #FFFFFF;
+
+  transition: box-shadow .2s linear;
+}
+
+.sale-button:hover {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25), 0 6px 6px rgba(0,0,0,0.22);
+}
+
+.sale-button:active {
+  box-shadow: none;
+}
+
+.sale-button-text {
+  display: block;
+  font-family: "GothamProBold";
+  font-size: 20px;
+
+  color: var(--black-color-text);
+}
+
+/* intro */
+
+.intro-background {
+  background-image: url('../imgs/header/intro.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.intro {
+  grid-template-rows: repeat(4, max-content);
+}
+
+.intro-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.8;
+}
+
+/* intro-description */
+
+.intro-description {
+  grid-template-rows: repeat(2, auto);
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  margin-top: 142px;
+}
+
+.mob-app-txt {
+  font-family: "GothamProBold";
+  font-size: 151px;
+  line-height: 1;
+  
+  margin-left: -11px;
+}
+
+.intro-tagline-txt {
+  font-family: "GothamProLight";
+  font-size: 38px;
+
+  margin-top: 44px;
+}
+
+/* intro-sale */
+
+.intro-sale {
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+
+  margin-top: 72px;
+}
+
+.intro-sale-desc-txt {
+  font-family: "GothamProMedium";
+  font-size: 35px;
+  text-transform: uppercase;
+
+  color: #FFC100;
+}
+
+.seventeen-k-rub-txt {
+  font-family: "GothamProBold";
+  font-size: 60px;
+  color: #FFC100;
+}
+
+.intro-sale-btn {
+  width: 243px;
+  height: 50px;
+  border-radius: 24px;
+
+  cursor: pointer;
+
+  align-self: flex-end;
+  text-align: center;
+  place-content: center;
+  
+  background-color: #FFC100;
+
+  transition: box-shadow .2s linear;
+}
+
+.intro-sale-btn:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) inset;
+}
+
+.intro-sale-btn:active {
+  box-shadow: none;
+}
+
+.intro-sale-btn-txt {
+  font-family: "GothamProBold";
+  font-size: 20px;
+
+  color: #000000;
+}
+
+/* intro-reference */
+
+.intro-reference {
+  width: max-content;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 2vw;
+  align-content: center;
+
+  margin-top: 64px;
+}
+
+.intro-reference-title-txt {
+  font-size: 22px;
+  align-self: center;
+
+  color: #828282;
+}
+
+.reference-img {
+  width: 162px;
+  height: 46px;
+
+  cursor: pointer;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* info-foxincup */
+
+.info-foxincup {
+  background-color: #2B2B2B;
+}
+
+.info {
+  grid-template-rows: repeat(5, max-content);
+}
+
+.info-description {
+  grid-template-rows: repeat(5, max-content);
+  row-gap: 34px;
+
+  margin-top: 80px;
+
+  font-size: 24px;
+  color:#FFFFFF;
+}
+
+.info-link {
+  font-size: 24px;
+  color: #FFC100;
+}
+
+.request-title-txt {
+  color: #FFC100;
+  font-size: 32px;
+
+  margin-top: 74px;
+}
+
+/* counterpartys */
+
+.counterpartys-info {
+  background-color: #201F1F;
+}
+
+.counterpartys {
+  grid-template-rows: repeat(4, max-content);
+}
+
+.counterpartys-links {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 2vw;
+
+  margin-top: 65px;
+}
+
+.counterpartys-slider {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 3vw;
+
+  margin-top: 90px;
+}
+
+.counterparty-img {
+  height: 140px;
+  width: 140px;
+}
+
+.counterparty-description {
+  grid-template-rows: repeat(4, max-content);
+}
+
+.counterparty-name-txt {
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+.counterparty-title-txt {
+  font-size: 24px;
+  color: #FFC100;
+
+  margin-top: 10px;
+}
+
+.counterparty-review-txt {
+  font-size: 20px;
+  color: #FFFFFF;
+
+  margin-top: 18px;
+}
+
+/* slider */
+
+.slider-toggle {
+  grid-template-columns: repeat(4, max-content);
+  column-gap: 10px;
+
+  margin-top: 40px;
+}
+
+.slider-btn {
+  position: relative;
+  width: 7px;
+  height: 7px;
+
+  border-radius: 100%;
+
+  background-color: #FFFFFF;
+}
+
+.slider-btn::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+
+  position: absolute;
+  top: -3.5px;
+  left: -3.5px;
+
+  border: 1px solid #FFC100;
+  border-radius: 100%;
+}
+
+.slider-btn:hover {
+  background-color: #FFC100;
+}
+
+.slider-btn:hover::after {
+  opacity: 1;
+}
+
+/* footer */
+
+.footer-info {
+  background-color: #111111;
+}
+
+.footer {
+  grid-template-rows: repeat(5, max-content);
+}
+
+.request-title-txt {
+  font-size: 32px;
+
+  color: #FFFFFF;
+
+  margin-top: 4vh;
+}
+
+.footer-address {
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  color: #FFFFFF;
+
+  font-size: 20px;
+
+  margin-top: 8vh;
+}
+
+.first-column {
+  width: 8vw;
+  height: 3vh;
+}
+
+.second-column {
+  width: 13vw;
+  height: 3vh;
+}
+
+.footer-email-link{
+  color: #FFC100;
+}
+
+.location-img {
+  width: 460px;
+  height: 160px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fonts */
+
+@font-face {
+  font-family: "GothamProRegular";
+  src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+  src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"),
+  url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GothamProBold";
+  src: url("../fonts/GothamProBold/GothamProBold.eot");
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamProBold/GothamProBold.woff") format("woff"),
+  url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GothamProMedium";
+  src: url("../fonts/GothamProMedium/GothamProMedium.eot");
+  src: url("../fonts/GothamProMedium/GothamProMedium.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamProMedium/GothamProMedium.woff") format("woff"),
+  url("../fonts/GothamProMedium/GothamProMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GothamProLight";
+  src: url("../fonts/GothamProLight/GothamProLight.eot");
+  src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
+  url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
